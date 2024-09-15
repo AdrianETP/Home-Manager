@@ -21,3 +21,8 @@
 /frontend/npm-debug.log*
 /frontend/yarn-debug.log*
 /frontend/yarn-error.log*
+
+/PythonFlaskHost/venv
+/PythonFlaskHost/bin
+/PythonFlaskHost/lib
+/PythonFlaskHost/include
