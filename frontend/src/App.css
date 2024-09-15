@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #F5F5F5;
+  font-family: "DM Sans", sans-serif; /* Puedes ajustar la fuente según tus necesidades */
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +42,40 @@
   to {
     transform: rotate(360deg);
   }
+  
+}
+
+.App {
+  text-align: center;
+}
+
+.person {
+  background-color: lightgray;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+
+
+
+}
+.descripccion {
+  background-color: lightgray;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+
+
+
+}
+/* src/App.css */
+
+.subtitle-container {
+  display: flex;
+  align-items: center;
 }

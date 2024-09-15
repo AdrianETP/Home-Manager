@@ -1,0 +1,11 @@
+/* src/components/Subtitle.css */
+
+.subtitle {
+    color: #6F6F6F;
+    font-family: "DM Sans"; /* Asegúrate de que esta fuente esté disponible en tu proyecto */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* Ajusta el line-height según sea necesario */
+  }
+  

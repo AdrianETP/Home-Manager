@@ -1,0 +1,17 @@
+/* src/components/Title.css */
+
+.title {
+    display: flex;
+    width: 296px;
+    height: 70px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #4F4F4F;
+    font-family: "DM Sans", sans-serif; /* Asegúrate de que esta fuente esté disponible en tu proyecto */
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* Ajusta el line-height según sea necesario */
+  }
+  

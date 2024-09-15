@@ -1,0 +1,72 @@
+/* src/components/Box.css */
+
+.box {
+  width: 717px;
+  height: 61px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.box-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 220px;
+  height: 26.351px;
+}
+
+.box-title {
+  color: #4F4F4F;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 18px; /* 90% */
+}
+
+.box-subtitle {
+  color: rgba(79, 79, 79, 0.70);
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+}
+
+.box-status {
+  width: 77px;
+  height: 26px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px; /* 138.462% */
+  color: #F6F6F6;
+}
+
+.box-status.completed {
+  background: rgba(46, 204, 113, 0.70); /* Color para completado */
+}
+
+.box-status.pending {
+  background: rgba(255, 167, 38, 0.70); /* Color para pendiente */
+}
+
+.box-user-icon img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}

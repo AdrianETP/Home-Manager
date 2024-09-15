@@ -1,0 +1,45 @@
+/* src/components/Sidebar.css */
+
+.sidebar {
+    width: 200px;
+    height: 832px;
+    background: #A3D39C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .sidebar-title {
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; /* 60% */
+    margin-bottom: 20px;
+  }
+  
+  .line {
+    width: 130px;
+    height: 2px;
+    background: #FFF;
+    margin: 20px 0;
+  }
+  
+  .sidebar-item {
+    display: flex;
+    width: 113px;
+    height: 27px;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 86.957% */
+    margin: 10px 0;
+  }
+  
