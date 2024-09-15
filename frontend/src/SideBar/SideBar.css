@@ -1,0 +1,59 @@
+.SideBar {
+    height: 120vh;
+    position: sticky;
+    top: 0;
+    width: 11.5625rem;
+    flex-shrink: 0;
+    background: #A3D39C;
+    padding-left: 0.8rem;
+    margin-right: 0;
+}
+
+.SideBar-option {
+    height: 1.6875rem;
+    color: #FFF;
+    /* font-family: Inter; */
+    font-size: 1.4375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5625rem; /* 108.696% */
+
+    text-decoration: none;
+
+}
+
+.SideBar-icon {
+    width: 1.25rem;
+    height: 1.1875rem;
+    flex-shrink: 0;
+    color: #FFFfff;
+}
+
+.SideBar-divider {
+    height: 1px;
+    background-color: #FFF;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.SideBar-title {
+    color: #FFF;
+    /* font-family: Inter; */
+    font-size: 1.875rem;
+    font-style: normal;
+    line-height: 1.125rem; /* 60% */
+    margin-top: 2rem;
+}
+
+.SideBar-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 1.25rem;
+}
+
+/* *{
+    border-style: solid;
+} */
