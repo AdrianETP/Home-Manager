@@ -17,13 +17,13 @@ function DespensaListPage({seeItem}) {
                 </div>
                 <div className="Card-container" >
                     <div className='Single-container' onClick={() => seeItem("DespensaItem")}> 
-                    <DespensaItemPage onClick={() => seeItem("DespensaItem")}/>
+                    <DespensaItemPage date='17/SEP/2024' price='196' onClick={() => seeItem("DespensaItem")}/>
                     </div>
                     <div className='Single-container' onClick={() => seeItem("DespensaItem")}> 
-                    <DespensaItemPage onClick={() => seeItem("DespensaItem")}/>
+                    <DespensaItemPage date="16/SEP/2024" price='857' onClick={() => seeItem("DespensaItem")}/>
                     </div>
                     <div className='Single-container' onClick={() => seeItem("DespensaItem")}> 
-                    <DespensaItemPage onClick={() => seeItem("DespensaItem")}/>
+                    <DespensaItemPage  date='13/SEP/2024' price='1500' onClick={() => seeItem("DespensaItem")}/>
                     </div>
                     <div className='Button-container'>
                         <button className='Add-button'>Agregar despensa</button>

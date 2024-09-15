@@ -140,9 +140,9 @@ function ServiciosPage(props) {
 
   let isTotal = () => {
     if (serviceG.price > 0) {
-      return 2008
-    } else {
       return 2177
+    } else {
+      return 2008
     }
   }
 

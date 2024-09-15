@@ -23,8 +23,8 @@ function DespensaPage() {
                 </div>
             </div>
             <div className="Page-container-right">
-                <ServiciosTotal total="196"/>
-                <InquilinosComponent total={95}/>
+                <ServiciosTotal total="65"/>
+                <InquilinosComponent restante={65}/>
             </div>  
         </div>
     );

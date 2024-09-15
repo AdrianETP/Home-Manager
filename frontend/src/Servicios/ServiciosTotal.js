@@ -12,9 +12,17 @@ const ServiciosTotal = (props) => {
         }
     }
 
+    function hasTitle() {
+        if (props.title) {
+            return props.title
+        } else {
+            return 'Total por persona'
+        }
+    }
+
     return (
         <div className='Total-card'>
-            <h4 className='Total-subtitle'>Total por persona</h4>
+            <h4 className='Total-subtitle'>{hasTitle()}</h4>
             <h1 className='Total-amount'>${isTotal()}</h1>
             <h4 className='Total-subtitle'>30 de Octubre</h4>
         </div>
