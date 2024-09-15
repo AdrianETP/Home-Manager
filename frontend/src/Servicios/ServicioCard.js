@@ -21,6 +21,9 @@ function ServicioCard(service) {
   // Estado para almacenar el archivo seleccionado
   const [selectedFile, setSelectedFile] = useState(null);
 
+  function changePage(page) {
+    service.change(page)
+  }
   // Función para manejar la selección del archivo
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]); // Guardar el archivo en el estado
@@ -102,7 +105,7 @@ function ServicioCard(service) {
         </div>
         <div className='Card-buttons'>
           <ContributorsComponent />
-          <img src={analyticsButton} className="Analytics-button" alt="logo" />
+          <img src={analyticsButton} className="Analytics-button" alt="logo" onClick={() => changePage("Graficas")} />
         </div>
 
       </div>

@@ -5,7 +5,7 @@ import InquilinosComponent from './InquilinosComponent';
 import homeIcon from '../Assets/blueHouseIcon.svg';
 import './ServiciosPage.css';
 
-function ServiciosPage() {
+function ServiciosPage(props) {
   // Estado para guardar el servicio de electricidad
   const [serviceE, setServiceE] = useState({
     name: 'Electricidad',
@@ -146,6 +146,10 @@ function ServiciosPage() {
     }
   }
 
+  let changePage = (page) => {
+    props.onChange(page)
+  }
+
 
   return (
     <div className="ServiciosPage-container">
@@ -153,11 +157,11 @@ function ServiciosPage() {
       <div className= "ServiciosPage-container-left">
         <h1 className="ServiciosPage-title">Servicios</h1>
         <div className="ServicioCard-container">
-          <ServicioCard service={serviceE} />
-          <ServicioCard service={serviceA} />
-          <ServicioCard service={serviceG} />
-          <ServicioCard service={serviceI} />
-          <ServicioCard service={serviceR} />
+          <ServicioCard service={serviceE} change={changePage}/>
+          <ServicioCard service={serviceA} change={changePage}/>
+          <ServicioCard service={serviceG} change={changePage}/>
+          <ServicioCard service={serviceI} change={changePage}/>
+          <ServicioCard service={serviceR} change={changePage}/>
         </div>
       </div>
       <div className="ServiciosPage-container-right" onClick={blankService}>

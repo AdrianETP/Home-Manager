@@ -79,7 +79,7 @@ function App() {
             return (
                 <div className="App">
                     <SideBar changePage={changePage} />
-                    <ServiciosPage />
+                    <ServiciosPage onChange={changePage} />   
                 </div>
             )
         case "Graficas":
@@ -104,4 +104,7 @@ function App() {
                     <ServiciosPage />
                 </div>
             )
-    }
+  
+          }
+  }
+  export default App;
