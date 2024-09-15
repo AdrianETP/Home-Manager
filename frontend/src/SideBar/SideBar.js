@@ -1,6 +1,7 @@
 import React from 'react';
 import shoppingIcon from '../Assets/shoppingIcon.svg';
 import homeIcon from '../Assets/homeIconWhite.svg';
+import darkHomeIcon from '../Assets/homeIcon.svg';
 import tasksIcon from '../Assets/tasksIcon.svg';
 import './SideBar.css';
 

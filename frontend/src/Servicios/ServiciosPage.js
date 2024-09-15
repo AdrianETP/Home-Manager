@@ -2,6 +2,7 @@ import React from 'react';
 import ServicioCard from './ServicioCard';
 import ServiciosTotal from './ServiciosTotal';
 import InquilinosComponent from './InquilinosComponent';
+import homeIcon from '../Assets/blueHouseIcon.svg';
 import './ServiciosPage.css';
 
 function ServiciosPage() {
@@ -44,6 +45,7 @@ function ServiciosPage() {
 
     return (
         <div className="ServiciosPage-container">
+            <img src={homeIcon} alt="Home" className='Background-icon'/>
             <div className= "ServiciosPage-container-left">
                 <h1 className="ServiciosPage-title">Servicios</h1>
                 <div className="ServicioCard-container">
