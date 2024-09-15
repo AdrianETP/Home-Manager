@@ -31,6 +31,23 @@ function ServicioCard(service) {
     icon = homeIcon
   }
 
+  let addReceipt = () => {
+    if (service.service.price == 0) {
+      return (
+        <div className='Card-add-receipt'>
+          <h3 className='Card-add-receipt-text'>Registrar recibo</h3>
+        </div>
+      )
+    } else {
+      return(
+        <div>
+          <h4 className='Card-date'>{service.service.paymentDate}</h4>
+          <h5 className='Card-sub-date'>{service.service.subDate}</h5>
+        </div>
+      )
+    }
+  }
+
   return (
     <div className='Service-card'>
       <div className='Card-left-info'> 
@@ -46,8 +63,7 @@ function ServicioCard(service) {
       </div>
       <div className='Card-info'>
         <h1 className='Card-price'>${service.service.price}</h1>
-        <h4 className='Card-date'>{service.service.paymentDate}</h4>
-        <h5 className='Card-sub-date'>{service.service.subDate}</h5>
+        {addReceipt()}
       </div>
     </div>
   );

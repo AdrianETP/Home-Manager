@@ -1,11 +1,14 @@
 import logo from './logo.svg';
-import ServicioCard from './Servicios/ServicioCard';
+import { useState } from 'react';
 import './App.css';
 import ServiciosPage from './Servicios/ServiciosPage';
 import SideBar from './SideBar/SideBar';
 import DespensaPage from './Despensa/DespensaPage';
+import DespensaListPage from './Despensa/DespensaListPage';
 
 function App() {
+
+  const [page, setPage] = useState("Despensa");
 
   let serviceE = {
     name: "Electricidad",
@@ -42,13 +45,49 @@ function App() {
     subDate: "Faltan 11 días"
   }
 
-  return (
-    <div className="App">
-      <SideBar/>
-      {/* <ServiciosPage /> */}
-      <DespensaPage />
-    </div>
-  );
+  let changePage = (page) => {
+    setPage(page)
+  }
+
+  switch (page) {
+    case "DespensaList":
+      return (
+        <div className="App">
+          <SideBar changePage={changePage}/>
+          <DespensaListPage seeItem={changePage} />
+        </div>
+      )
+
+    case "DespensaItem":
+    return (
+      <div className="App">
+        <SideBar changePage={changePage}/>
+        <DespensaPage/>
+      </div>
+    )
+    case "Servicios":
+      return (
+        <div className="App">
+          <SideBar changePage={changePage}/>
+          <ServiciosPage />
+        </div>
+      )
+    case "Despensa":
+      return (
+        <div className="App">
+          <SideBar changePage={changePage}/>
+          <ServiciosPage/>
+        </div>
+      )
+    default:
+      return (
+        
+        <div className="App">
+          <SideBar changePage={changePage}/>
+          <ServiciosPage />
+        </div>
+      )
+  }
 }
 
 export default App;

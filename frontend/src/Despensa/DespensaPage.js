@@ -1,7 +1,7 @@
 import React from 'react';
 import './DespensaPage.css';
 import ProductComponent from './ProductComponent';
-import shoppingIcon from '../Assets/shoppingIcon.svg';
+import shoppingIcon from '../Assets/shoppingIconBlue.svg';
 import ServiciosTotal from '../Servicios/ServiciosTotal';
 import InquilinosComponent from '../Servicios/InquilinosComponent';
 
