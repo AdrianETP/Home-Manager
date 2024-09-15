@@ -1,44 +1,44 @@
 package types
 
 type Usuarios struct {
-	Id_usuario        int
-	Nombre            string
-	Apellidos         string
-	Grupo_id          string
-	Monto_a_deber     float32
-	Deberes_asignados []int
+	Nombre            string  `json:"nombre"`
+	Apellidos         string  `json:"apellidos"`
+	Grupo_id          int     `json:"grupo_id"`
+	Monto_a_deber     float32 `json:"monto_a_deber"`
+	Deberes_asignados []int   `json:"deberes_asignados"`
 }
 
 type Grupos struct {
-	Id_grupo     int
-	Num_personas int
+	Id           int `json:"_id" bson:"_id" `
+	Num_personas int `json:"num_personas"`
 }
 
 type Deberes struct {
-	Id_deber   int
-	Id_usuario int
-	Nombre     string
-	Completado bool
+	Id         int    `json:"_id" bson:"_id"`
+	Id_usuario int    `json:"id_usuario"`
+	Nombre     string `json:"nombre"`
+	Completado bool   `json:"completado"`
 }
 
 type Recibos struct {
-	Id_recibo    int
-	Monto        int
-	Grupo_id     int
-	Fecha_limite string
+	Id           int    `json:"_id" bson:"_id"`
+	Monto        int    `json:"monto"`
+	Grupo_id     int    `json:"grupo_id"`
+	Fecha_limite string `json:"fecha_limite"`
+	Tipo         string `json:"tipo"`
 }
 
 type Gastos struct {
-	Id_gasto        int
-	Nombre          string
-	Monto           int
-	Id_usuario      int
-	Fecha_del_gasto string
+	Id              int    `json:"_id" bson:"_id"`
+	Nombre          string `json:"nombre"`
+	Monto           int    `json:"monto"`
+	Id_usuarios     []int  `json:"id_usuarios"`
+	Fecha_del_gasto string `json:"fecha_del_gasto"`
 }
 
 type Reportes struct {
-	Id_reporte  int
-	Id_usuario  int
-	Nombre      string
-	Descripcion string
+	Id          int    `json:"_id" bson:"_id"`
+	Id_usuario  int    `json:"id_usuario"`
+	Nombre      string `json:"nombre"`
+	Descripcion string `json:"descripcion"`
 }
