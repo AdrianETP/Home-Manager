@@ -1,44 +1,44 @@
 package types
 
 type Usuarios struct {
-	id_usuario        int
-	nombre            string
-	apellidos         string
-	grupo_id          string
-	monto_a_deber     float32
-	deberes_asignados []int
+	Id_usuario        int
+	Nombre            string
+	Apellidos         string
+	Grupo_id          string
+	Monto_a_deber     float32
+	Deberes_asignados []int
 }
 
 type Grupos struct {
-	id_grupo     int
-	num_personas int
+	Id_grupo     int
+	Num_personas int
 }
 
 type Deberes struct {
-	id_deber   int
-	id_usuario int
-	nombre     string
-	completado bool
+	Id_deber   int
+	Id_usuario int
+	Nombre     string
+	Completado bool
 }
 
 type Recibos struct {
-	id_recibo    string
-	monto        int
-	grupo_id     int
-	fecha_limite string
+	Id_recibo    int
+	Monto        int
+	Grupo_id     int
+	Fecha_limite string
 }
 
 type Gastos struct {
-	id_gasto        int
-	nombre          string
-	monto           int
-	id_usuario      int
-	fecha_del_gasto string
+	Id_gasto        int
+	Nombre          string
+	Monto           int
+	Id_usuario      int
+	Fecha_del_gasto string
 }
 
 type Reportes struct {
-	id_reporte  int
-	id_usuario  int
-	nombre      string
-	descripcion string
+	Id_reporte  int
+	Id_usuario  int
+	Nombre      string
+	Descripcion string
 }
