@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import ServicioCard from './Servicios/ServicioCard';
 import './App.css';
 import ServiciosPage from './Servicios/ServiciosPage';
+import SideBar from './SideBar/SideBar';
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
 
   return (
     <div className="App">
+      <SideBar/>
       <ServiciosPage />
     </div>
   );
