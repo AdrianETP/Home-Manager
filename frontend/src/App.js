@@ -5,6 +5,7 @@ import ServiciosPage from './Servicios/ServiciosPage';
 import SideBar from './SideBar/SideBar';
 import DespensaPage from './Despensa/DespensaPage';
 import DespensaListPage from './Despensa/DespensaListPage';
+import DeberesPage from './Deberes/DeberesPage';
 import Graficas from './Graficas/graficas';
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
                 </div>
             )
 
+
         case "DespensaItem":
             return (
                 <div className="App">
@@ -87,6 +89,13 @@ function App() {
                     <Graficas />
                 </div>
             )
+        case "Deberes":
+        return (
+          <div className="App">
+            <SideBar changePage={changePage}/>
+            <DeberesPage/>
+          </div>
+        )
         default:
             return (
 
@@ -96,6 +105,3 @@ function App() {
                 </div>
             )
     }
-}
-
-export default App;

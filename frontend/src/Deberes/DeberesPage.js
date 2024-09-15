@@ -4,6 +4,9 @@ import ProductComponent from './ProductComponent';
 import shoppingIcon from '../Assets/shoppingIconBlue.svg';
 import ServiciosTotal from '../Servicios/ServiciosTotal';
 import InquilinosComponent from '../Servicios/InquilinosComponent';
+import userProfilePic from '../Assets/userProfilePic.png';
+import userProfilePic2 from '../Assets/userProfilePic2.jpeg';
+import userProfilePic3 from '../Assets/userProfilePic3.jpeg';
 
 function DespensaPage() {
     return (
@@ -11,21 +14,21 @@ function DespensaPage() {
             <img src={shoppingIcon} alt="Home" className='Background-icon'/>
             <div className= "Page-container-left">
                 <div className="Page-header">
-                    <h1 className="Page-title">Despensa</h1>
+                    <h1 className="Page-title">Deberes</h1>
                     <h3 className="Page-subtitle">22 de Septiembre</h3>
                 </div>
                 <div className="Card-container">
-                    <ProductComponent name="Leche" precio="25" />
-                    <ProductComponent name="Huevos" precio="81"/>
-                    <ProductComponent name="Aceite" precio="43"/>
-                    <ProductComponent name="Jabón de platos" precio="15" />
-                    <ProductComponent name="Toallas de papel" precio="32"/>
+                    <ProductComponent image={userProfilePic} name="Barrer la cocina" precio="Listo" />
+                    <ProductComponent image={userProfilePic2} name="Limpiar la mesa" precio="Pendiente"/>
+                    <ProductComponent image={userProfilePic} name="Lavar los platos" precio="Pendiente"/>
+                    <ProductComponent image={userProfilePic2} name="Trapear la sala" precio="Listo" />
+                    <ProductComponent image={userProfilePic3} name="Sacar la basura" precio="Listo"/>
                 </div>
             </div>
-            <div className="Page-container-right">
+            {/* <div className="Page-container-right">
                 <ServiciosTotal total="196"/>
                 <InquilinosComponent total={95}/>
-            </div>  
+            </div>   */}
         </div>
     );
 }
