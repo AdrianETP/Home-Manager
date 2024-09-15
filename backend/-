@@ -1,0 +1,44 @@
+package routes
+
+import (
+	"context"
+
+	"github.com/adrianetp/home-manager/db"
+	"github.com/adrianetp/home-manager/types"
+	"github.com/gofiber/fiber/v2"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+)
+
+func GetAllRecibos(app *fiber.App) {
+	app.Get("recibos/electricidad", func(c fiber.Ctx) error {
+		return c.JSON(fiber.Map{})
+	})
+	app.Post("recibos/electricidad", func(c fiber.Ctx) error {
+		// var body struct {
+		// 	Id           string
+		// 	Monto        int
+		// 	Grupo_id     string
+		// 	Fecha_limite string
+		// }
+		var recibo types.Recibos
+
+		// json.Unmarshal(c.BodyRaw(), &body)
+		recibo.Id = primitive.NewObjectID()
+		// grupo_id, err := primitive.ObjectIDFromHex(body.Grupo_id)
+		// if err != nil {
+		// 	log.Fatal("error al convertir grupoid a objectid")
+		// }
+
+		db.Database.Collection("Recibos").InsertOne(context.TODO(), bson.M{
+			"_id":          recibo.Id,
+			"monto":        recibo.Monto,
+			"grupo_id":     recibo.Grupo_id,
+			"fecha_limite": recibo.Fecha_limite,
+		})
+
+		return c.JSON(fiber.Map{
+			"recibo": recibo,
+		})
+	})
+}
