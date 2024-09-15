@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .App-logo {
@@ -11,6 +13,13 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.ServicioCard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .App-header {

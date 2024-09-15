@@ -1,25 +1,93 @@
 import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import ServiciosPage from './Servicios/ServiciosPage';
+import SideBar from './SideBar/SideBar';
+import DespensaPage from './Despensa/DespensaPage';
+import DespensaListPage from './Despensa/DespensaListPage';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const [page, setPage] = useState("Despensa");
+
+  let serviceE = {
+    name: "Electricidad",
+    price: 888,
+    paymentDate: "30 de Septiembre",
+    subDate: "Faltan 11 días"
+  }
+
+  let serviceA = {
+    name: "Agua",
+    price: 121,
+    paymentDate: "30 de Septiembre",
+    subDate: "Faltan 11 días"
+  }
+
+  let serviceG = {
+    name: "Gas",
+    price: 345,
+    paymentDate: "30 de Septiembre",
+    subDate: "Faltan 11 días"
+  }
+
+  let serviceI = {
+    name: "Internet",
+    price: 745,
+    paymentDate: "30 de Septiembre",
+    subDate: "Faltan 11 días"
+  }
+
+  let serviceR = {
+    name: "Renta",
+    price: 957,
+    paymentDate: "30 de Septiembre",
+    subDate: "Faltan 11 días"
+  }
+
+  let changePage = (page) => {
+    setPage(page)
+  }
+
+  switch (page) {
+    case "DespensaList":
+      return (
+        <div className="App">
+          <SideBar changePage={changePage}/>
+          <DespensaListPage seeItem={changePage} />
+        </div>
+      )
+
+    case "DespensaItem":
+    return (
+      <div className="App">
+        <SideBar changePage={changePage}/>
+        <DespensaPage/>
+      </div>
+    )
+    case "Servicios":
+      return (
+        <div className="App">
+          <SideBar changePage={changePage}/>
+          <ServiciosPage />
+        </div>
+      )
+    case "Despensa":
+      return (
+        <div className="App">
+          <SideBar changePage={changePage}/>
+          <ServiciosPage/>
+        </div>
+      )
+    default:
+      return (
+        
+        <div className="App">
+          <SideBar changePage={changePage}/>
+          <ServiciosPage />
+        </div>
+      )
+  }
 }
 
 export default App;
