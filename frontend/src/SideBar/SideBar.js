@@ -25,8 +25,8 @@ const SideBar = ({ changePage }) => {
                 <a className='SideBar-option' href="#">Deberes</a>
             </div>
 
-            <div className='SideBar-section' onClick={() => changePage("Graficas")}>
-                <img src={tasksIcon} alt="Tasks" className='SideBar-icon' />
+            <div className='SideBar-section' onClick={() => changePage("Historial")}>
+                <img src={homeIcon} alt="Tasks" className='SideBar-icon' />
                 <a className='SideBar-option' href="#">Graficas</a>
             </div>
         </div>
