@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import userProfilePic from '../Assets/userProfilePic.png';
-
+import ContributorsComponent from '../SharedComponents/ContribuitorsComponents';
 import electicityIcon from '../Assets/electricityIcon.svg';
 import waterIcon from '../Assets/waterIcon.svg';
 import gasIcon from '../Assets/gasIcon.svg';
@@ -39,11 +39,7 @@ function ServicioCard(service) {
             <h2 className="Servicio-label">{service.service.name}</h2>
         </div>
         <div className='Card-buttons'>
-          <div className='Contribuitors-component'>
-            <img src={userProfilePic} className="User-profile-pic" alt="logo" />
-            <img src={userProfilePic} className="User-profile-pic" alt="logo" />
-            <img src={userProfilePic} className="User-profile-pic" alt="logo" />
-          </div>
+          <ContributorsComponent />
           <img src={analyticsButton} className="Analytics-button" alt="logo" />
         </div>
 

@@ -3,6 +3,7 @@ import ServicioCard from './Servicios/ServicioCard';
 import './App.css';
 import ServiciosPage from './Servicios/ServiciosPage';
 import SideBar from './SideBar/SideBar';
+import DespensaPage from './Despensa/DespensaPage';
 
 function App() {
 
@@ -44,7 +45,8 @@ function App() {
   return (
     <div className="App">
       <SideBar/>
-      <ServiciosPage />
+      {/* <ServiciosPage /> */}
+      <DespensaPage />
     </div>
   );
 }
