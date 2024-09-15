@@ -1,0 +1,79 @@
+.Product-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding: 1rem; */
+  border-radius: 1rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: white;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  /* width: 37.75rem; */
+  width: 100%;
+  height: 8.6875rem;
+}
+
+.Product-left-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-right: 2rem;
+}
+
+.Product-check {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.CheckBox {
+    border-radius: 10px;
+    border-color: #616161;
+    margin-right: 2rem;
+}
+
+.Product-right-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.5rem
+}
+
+.Product-name {
+  color: #4F4F4F;
+  /* font-family: "DM Sans"; */
+  padding-left: 1rem;
+
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.125rem; /* 56.25% */
+}
+
+.Despensa-card:hover {
+  cursor: pointer;
+    
+}
+
+.Product-price {
+  color: #4F4F4F;
+  text-align: center;
+  /* font-family: "DM Sans"; */
+  font-size: 2.4375rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.125rem; 
+  margin-right: 1rem;
+  margin-bottom: 0.01rem;
+}
+
+.Comprado-label {
+    color: var(--Gray-700, #616161);
+    font-variant-numeric: lining-nums tabular-nums;
+    /* Body 1/Normal */
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.5rem */
+}

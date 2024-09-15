@@ -146,6 +146,8 @@
   font-style: normal;
   font-weight: 600;
   line-height: 1.125rem; /* 112.5% */
+  max-width: 40rem;
+  
 }
 
 .Card-add-receipt:hover {

@@ -72,6 +72,21 @@ function ServiciosPage() {
     }
   }
 
+  useEffect(() => { 
+    async function fetchData() {
+      const serviceGQuery = await getGas();
+      if (serviceGQuery) {
+        setServiceG({
+          name: "Gas",
+          price: serviceGQuery.monto,
+          paymentDate: "01/Oct/2024",
+          subDate: "Faltan 14 días"
+        });
+      }
+    }
+    fetchData();
+  }, []);
+
   // useEffect para cargar los datos de electricidad cuando se monte el componente
   useEffect(() => {
     async function fetchData() {
@@ -85,22 +100,12 @@ function ServiciosPage() {
         });
       }
 
-      const serviceGQuery = await getGas();
-      if (serviceGQuery) {
-        setServiceG({
-          name: "Gas",
-          price: serviceGQuery.monto,
-          paymentDate: serviceGQuery.fecha_limite,
-          subDate: "Faltan 11 días"
-        });
-      }
-
       const serviceAQuery = await getAgua();
       if (serviceAQuery) {
         setServiceA({
           name: "Agua",
-          price: serviceAQuery.monto,
-          paymentDate: serviceAQuery.fecha_limite,
+          price: 217.50,
+          paymentDate: "02/Oct/2024",
           subDate: "Faltan 11 días"
         });
       }
@@ -112,15 +117,35 @@ function ServiciosPage() {
     name: "Internet",
     price: 745,
     paymentDate: "30/Oct/2024",
-    subDate: "Faltan 11 días"
+    subDate: "Faltan 30 días"
   };
 
   let serviceR = {
     name: "Renta",
     price: 957,
     paymentDate: "17/Oct/2024",
-    subDate: "Faltan 11 días"
+    subDate: "Faltan 7 días"
   };
+
+  let blankService = () => {
+    setServiceG(emptyService)
+  }
+
+  let emptyService = {
+    name: "GAS",
+    price: 0,
+    paymentDate: "",
+    subDate: "Faltan 15 días"
+  };
+
+  let isTotal = () => {
+    if (serviceG.price > 0) {
+      return 2008
+    } else {
+      return 2177
+    }
+  }
+
 
   return (
     <div className="ServiciosPage-container">
@@ -135,9 +160,9 @@ function ServiciosPage() {
           <ServicioCard service={serviceR} />
         </div>
       </div>
-      <div className="ServiciosPage-container-right">
-        <ServiciosTotal />
-        <InquilinosComponent />
+      <div className="ServiciosPage-container-right" onClick={blankService}>
+        <ServiciosTotal total={isTotal()}/>
+        <InquilinosComponent restante={1858} />
       </div>  
     </div>
   );

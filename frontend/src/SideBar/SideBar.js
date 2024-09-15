@@ -20,7 +20,7 @@ const SideBar = ({changePage}) => {
                 <img src={shoppingIcon} alt="Shopping" className='SideBar-icon'/>
                 <a className='SideBar-option' href="#">Despensa</a>
             </div>
-            <div className='SideBar-section' onClick={() => changePage("Despensa")}>
+            <div className='SideBar-section' onClick={() => changePage("Deberes")}>
                 <img src={tasksIcon} alt="Tasks" className='SideBar-icon'/>
                 <a className='SideBar-option' href="#">Deberes</a>
             </div>

@@ -17,6 +17,45 @@ function ServicioCard(service) {
   // const [servicePaymentDate, setPaymentDate] = useState("30 de Septiembre");
   // const [cardSubDate, setSubDate] = useState("Faltan 11 días");
 
+  
+  // Estado para almacenar el archivo seleccionado
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  // Función para manejar la selección del archivo
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]); // Guardar el archivo en el estado
+  };
+
+  const handleUpload = async () => {
+    if (selectedFile) {
+      const formData = new FormData();
+      formData.append('archivo', selectedFile);
+      formData.append('grupo_id', 1);
+      formData.append('tipo', "GAS");
+
+      try {
+        const response = await fetch('http://100.90.85.75/upload_pdf', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (response.ok) {
+          console.log('Archivo subido con éxito');
+          // Opcional: Procesa la respuesta del servidor
+          const result = await response.json();
+          console.log(result);
+          // service.fetchService()
+        } else {
+          console.error('Error al subir el archivo');
+        }
+      } catch (error) {
+        console.error('Error de red:', error);
+      }
+    } else {
+      console.log('Por favor, selecciona un archivo y proporciona id y descripción');
+    }
+  };
+
   let icon = electicityIcon
 
   if (service.service.name == "Electricidad") {
@@ -34,13 +73,19 @@ function ServicioCard(service) {
   let addReceipt = () => {
     if (service.service.price == 0) {
       return (
-        <div className='Card-add-receipt'>
-          <h3 className='Card-add-receipt-text'>Registrar recibo</h3>
+        <div>
+          <h1 className='Card-date'>Registra tu recibo</h1>
+          <div className='Card-add-receipt'>
+            <input type="file" onChange={handleFileChange}/>
+            <button onClick={handleUpload}>Registrar</button>
+          </div>
         </div>
+        
       )
     } else {
       return(
         <div>
+          <h1 className='Card-price'>${service.service.price}</h1>
           <h4 className='Card-date'>{service.service.paymentDate}</h4>
           <h5 className='Card-sub-date'>{service.service.subDate}</h5>
         </div>
@@ -62,7 +107,6 @@ function ServicioCard(service) {
 
       </div>
       <div className='Card-info'>
-        <h1 className='Card-price'>${service.service.price}</h1>
         {addReceipt()}
       </div>
     </div>

@@ -30,6 +30,12 @@
 
 }
 
+.SideBar-option:hover {
+    padding: 5px;
+    background: #7BBE8A;
+    border-radius: 0.625rem;
+}
+
 .SideBar-icon {
     width: 1.25rem;
     height: 1.1875rem;
